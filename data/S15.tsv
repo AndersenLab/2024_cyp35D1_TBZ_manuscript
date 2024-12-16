@@ -1,0 +1,31 @@
+cluster	substrate	counts	pval	yval	xval	test
+E	Arthropod_in	0		60	E	A
+E	Compost_in	7		60	E	C
+E	Fungus_in	1		60	E	F
+E	Mollusk_in	0		60	E	M
+E	Rotting_flower_in	1	*	60	E	RF
+E	Rotting_nut/pod/seed/fruit_in	15		60	E	RNPSF
+E	Rotting_stem_in	2		60	E	RS
+E	Rotting_wood_in	0		60	E	RW
+E	Soil_in	0		60	E	S
+E	Vegetal_litter/mix_in	1	*	60	E	VL
+D	Arthropod_in	0		60	E	A
+D	Compost_in	9		60	E	C
+D	Fungus_in	0		60	E	F
+D	Mollusk_in	1		60	E	M
+D	Rotting_flower_in	2	*	60	E	RF
+D	Rotting_nut/pod/seed/fruit_in	20		60	E	RNPSF
+D	Rotting_stem_in	0		60	E	RS
+D	Rotting_wood_in	1		60	E	RW
+D	Soil_in	4		60	E	S
+D	Vegetal_litter/mix_in	4	*	60	E	VL
+K	Arthropod_in	4		60	E	A
+K	Compost_in	42		60	E	C
+K	Fungus_in	1		60	E	F
+K	Mollusk_in	5		60	E	M
+K	Rotting_flower_in	0	*	60	E	RF
+K	Rotting_nut/pod/seed/fruit_in	59		60	E	RNPSF
+K	Rotting_stem_in	15		60	E	RS
+K	Rotting_wood_in	0		60	E	RW
+K	Soil_in	8		60	E	S
+K	Vegetal_litter/mix_in	2	*	60	E	VL

@@ -1,0 +1,5 @@
+chrom	start	end	sample	gt	gt_name	supporting_sites	sites	DP	switches	nil_type
+Genome	1	3000000	ECA239	2	CB4856	NA	NA	NA	NA	N2
+Genome	1	3000000	ECA238	1	N2	NA	NA	NA	NA	CB
+Genome	1	3000000	N2	1	N2	NA	NA	NA	NA	CB
+Genome	1	3000000	CB4856	2	CB4856	NA	NA	NA	NA	N2
