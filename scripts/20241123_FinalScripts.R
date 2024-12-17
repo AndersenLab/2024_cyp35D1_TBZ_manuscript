@@ -1852,11 +1852,13 @@ devtools::install_github("YuLab-SMU/ggmsa")
 install.packages("ggtree")
 
 
-treecaenor <- ape::read.tree("data/phylotest.txt")%>%
-  as.tibble(phytools::midpoint.root(treecaenor))
+treecaenor <- ape::read.tree("data/phylo.txt")
+
+treecaenor<- ape::root(treecaenor, outgroup = "D.coronatus", resolve.root = TRUE)
 
 
-p <- treecaenor %>%
+
+ p<- treecaenor %>%
   tidytree::as.phylo(use.labels = T) %>%
   ggtree::ggtree(color="gray51") +
   ggplot2::theme(legend.position = "none")+
@@ -2043,38 +2045,4 @@ tajimasd <- tdfilt %>%
   theme(text=element_text(size=12),legend.position = "none")
 ggsave("plots/SFig12.png", plot=tajimasd, width = 7.5, height = 3, units = "in")
 
-##SFIG13##
-###Fig7###
-if (!requireNamespace("devtools", quietly=TRUE))
-  install.packages("devtools")
-devtools::install_github("YuLab-SMU/ggmsa")
-install.packages("ggtree")
-
-
-treecaenor <- ape::read.tree("data/tree2.txt")%>%
-  as.tibble(phytools::midpoint.root(treecaenor))
-
-
-# Set the global option for ignoring negative edges
-options(ignore.negative.edge = TRUE)
-
-# Then build your tree plot
-p <- treecaenor %>%
-  tidytree::as.phylo(use.labels = T) %>%
-  ggtree::ggtree(color = "gray51") +
-  ggplot2::theme(legend.position = "none") +
-  ggtree::geom_tiplab(aes(label = label), fontface = "italic", size = 2.5) +
-  ggtree::geom_treescale(
-    x = 0,          # Adjust x position (move right)
-    y = -1,         # Adjust y position (move down)
-    linesize = 0.5,   # Thickness of the scale bar
-    fontsize = 3      # Font size of the label
-  ) + xlim(0, 0.6)
-
-p1<-p+theme_classic(12)+theme(text=element_text(size=6),axis.line = element_blank(),
-                              axis.text = element_blank(),
-                              axis.ticks = element_blank())
-p1
-
-ggsave("plots/SFig13.png", plot=p1,width = 7.5,height=10,units="in",dpi=300)
 
